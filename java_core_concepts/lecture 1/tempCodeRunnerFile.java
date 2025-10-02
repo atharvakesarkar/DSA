@@ -1,0 +1,1 @@
+rkar, i want to be good programmer"); //use for print output
