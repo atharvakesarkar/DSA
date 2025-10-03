@@ -33,19 +33,39 @@ public class data_types {   //all the program are in the class
 // ----------------------- NON - PRIMITIVE DATA TYPE ------------------------------------
 
 //  STRING:-
-        String name = "Atharva kesarkar";
+        // String name = "Atharva kesarkar";
 
-        name = "Archie Thakare";
+        // name = "Archie Thakare";
 
-        System.out.println(name.length());
+        // System.out.println(name.length());
 
 // length() this method is use to get total length of string
     
+    // String firstname = "Atharva ";
+    // String lastname = "Kesarkar";
+
+
+    // System.out.println(firstname +lastname);
+    
+
+    
+//  THE USE OF NEW KEYWORD :
+
+
+    // String firstname = "Atharva";
+    // String name = "Atharva";  //Java says: “Why waste memory? Both mean the same thing,” so it points firstname and name to the same "Atharva" in the string pool.
+
+
+    // String firstname = new String("Atharva");
+    // String name = new String("Atharva");
+
+    // System.out.println(firstname + " " + name);
 
 
 
-
-
+    
+    
+    // so if we created two string with same value , 
 
 
 
