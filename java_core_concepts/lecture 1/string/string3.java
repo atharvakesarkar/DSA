@@ -3,6 +3,7 @@ class string3 {
     public static void main(String[] args) {
         
     // Methods of string 
+
     // concatenate
     // String name1 = "Atharva";
     // String name2 = "kesarkar";
@@ -28,6 +29,27 @@ class string3 {
 
     // System.out.println(name.length()); //output - 16
 
+
+
+
+    // REPLACE - this method is use to replace the char from the string / string is immutable so the change is save in another string 
+    // String name = "KRUTUIA";
+
+    // String name2 = name.replace('K', 'A');
+
+    // System.out.println(name2);
+
+
+
+
+    // SUBSTRING - This is use for printing specific part of string 
+    // this start poisition is 0 and end postion is n-1
+
+    String name = "Atharva and Krutika";
+
+    System.out.println(name.substring(0,7));
+
+    System.out.println(name); //string are always immutable 
 
 
 
