@@ -67,6 +67,27 @@ public class pratic_questions{
         // System.out.println("total ammout with GST "+solution * 1.18); //added gst cost
         
 
+//-----------------------------------------------------------------------------------------------------------------
+//q4.what will be the type of result in the following java code 
+                //byte b = 4;
+                //char c = 'a';
+                //short s = 512
+                //int i = 1000;
+                //float f = 3.14f
+                //double d = 99.9954;
+
+                // result = ((f * b) + (i % c) - (d * s)); 
+
+                //answer -  the higest daty type use , that is double 
+
+
+//----------------------------------------------------------------------------------------------------------------
+
+//q5. will the following  statement give any error in java - int $ = 24;
+
+        // int $ = 24;
+        // System.out.println($);
+
 
 
 
