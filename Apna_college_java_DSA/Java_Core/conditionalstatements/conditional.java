@@ -73,6 +73,23 @@ public class conditional{
     //     System.out.println("c is the largest number");
     // }
 
+//---------------------------------------------------------------------------------------------------------------
+
+    //check if the student is pass or fail
+
+    // System.out.print("enter your marks: ");
+    // int marks = scan.nextInt();
+
+
+    // if (marks>=33){
+    //     System.out.println("passed");
+    // } else {
+    //     System.out.println("failed");
+    // }
+
+
+
+
 
     }
 }
