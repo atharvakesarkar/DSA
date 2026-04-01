@@ -1,5 +1,6 @@
 
-// import java.util.*;
+import java.util.*;
+
 public class basic_func {
 
     // defined a function to print "Hello" 
@@ -12,13 +13,13 @@ public class basic_func {
     //     return 10 + 10;
     // }
     //-----------------------------------------------------------------------
-    //defined a function with parameters 
+    //------------------------------------ defined a function with parameters ------------------------------------ 
     public static int addition(int num1, int num2) {
         return num1 + num2;
     }
 
     //------------------------------------------------------------------------
-    //defined a function to swap the numbers:
+    //---------------------------------- defined a function to swap the numbers: ----------------------------------
     public static void swap(int a, int b) {
         int temp = a;
         a = b;
@@ -28,12 +29,32 @@ public class basic_func {
 
     }
 
-    // defined a function to return product of two numbers
+    // --------------------------- defined a function to return product of two numbers ----------------------------
     public static int product(int number1, int number2) {
         int sum = number1 * number2;
         return sum; //return is compulsary becasue return type is define as intger
     }
 
+    // --------------------------------- function for getting factorail of number ---------------------------------
+    public static int fact_func(int n) {
+        int fact = 1;
+        for (int i = 1; i <= n; i++) {
+            fact = fact * i;
+        }
+        return fact;
+    }
+
+    //  ------------------------------- function for getting binominal coefficient ------------------------------- 
+    public static int bino_coeff(int n, int r) {
+        int n_value = fact_func(n);
+        int r_value = fact_func(r);
+        int n_minus_r = n - r;
+
+        return n_value / (r_value * fact_func(n - r));
+    }
+
+//-----------------------------------------------------------------------------------------------------------------
+// -------------------------------- Main function starts from here ------------------------------------------------
     public static void main(String args[]) {
         // functions - are the block of code that we need to repeat , so instead of writing it multiple time in program...define it in the function and just call it whenever it needed 
 
@@ -41,14 +62,14 @@ public class basic_func {
         // System.out.println(sum()); //call sum function
         //---------------------------------------------------------------------------------------------------------
         // two user input for num1 and num2 
-        // Scanner scan = new Scanner(System.in); //created a object name as scan
+        Scanner scan = new Scanner(System.in); //created a object name as scan
         // System.out.print("ente a num1 value: ");
         // int num1 = scan.nextInt();
         // System.out.print("ente a num2 value: ");
         // int num2 = scan.nextInt();
         // System.out.println("addition value is: " + addition(num1, num2));
         //---------------------------------------------------------------------------------------------------
-        //code for swaping two numbers 
+        //---------------------------------- code for swaping two numbers -----------------------------------
         int a = 10;
         int b = 20;
         // int temp = b;
@@ -57,7 +78,7 @@ public class basic_func {
         // System.out.println(a);
         // System.out.println(b);
         //--------------------------------------------------------------------------------------------------
-        // calling a swap function
+        // ------------------------------------- calling a swap function ------------------------------------
         // CALL BY VALUE :  it is a mechanism in which the value of variable is copied and passed  to a method, so any changes made inside the method affect only the copy , not the orginal variable 
 
         // swap(a, b);
@@ -67,7 +88,19 @@ public class basic_func {
         int number1 = 5;
         int number2 = 2;
 
-        System.out.println(product(number1, number2)); //passing the copy of number1 and number2 
+        // System.out.println(product(number1, number2)); //passing the copy of number1 and number2 
+        //-----------------------------------------------------------------------------------------------------------
+        // ----------------------------------- find the factorial of the number -----------------------------------
+        System.out.print("Enter a number of which you need a factorial: ");
+        int n = scan.nextInt();
+
+        // System.out.println(fact_func(n));
+        // --------------------------------------------------------------------------------------------------------
+        // ------------------------- find the Binominal coefficent -----------------------------------------
+        System.out.println("Enter a number of which you need a nCr: ");
+        int r = scan.nextInt();
+
+        System.out.println(bino_coeff(n, r));
 
     }
 }
