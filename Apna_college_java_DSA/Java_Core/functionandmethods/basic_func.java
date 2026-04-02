@@ -66,19 +66,31 @@ public class basic_func {
         return value_1 + value_2 + value_3;
     }
 
-    // ---------------------------------function to find if number is prime or not---------------------------------
+    // // ---------------------------------function to find if number is prime or not---------------------------------
+    // public static boolean isprime(int n) {
+    //     boolean isprime = true;
+    //     for (int i = 2; i <= n - 1; i++) {
+    //         if (n % i == 0) {
+    //             isprime = false;
+    //             break;
+    //         }
+    //     }
+    //     return isprime;
+    // }
+    // ------------------------function to find if number is prime or not in optimized way------------------------
     public static boolean isprime(int n) {
         boolean isprime = true;
-        for (int i = 2; i <= n - 1; i++) {
+        for (int i = 2; i <= Math.sqrt(n); i++) {
             if (n % i == 0) {
                 isprime = false;
+                break;
             }
         }
         return isprime;
     }
 
-//-----------------------------------------------------------------------------------------------------------------
-// -------------------------------- Main function starts from here ------------------------------------------------
+    // ----------------------------------------------------------------------------------------------------------
+    // -------------------------------- Main function starts from here --------------------------------------------
     public static void main(String args[]) {
         // functions - are the block of code that we need to repeat , so instead of writing it multiple time in program...define it in the function and just call it whenever it needed 
 
@@ -139,5 +151,7 @@ public class basic_func {
         // ----------------------calling function for checking if the number is prime or not----------------------
         System.out.println(isprime(12));
 
+        // -----------calling function for checking if the number is prime or not for the optimized one-----------
+        System.out.println(isprime(12));
     }
 }
