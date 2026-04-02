@@ -53,6 +53,30 @@ public class basic_func {
         return n_value / (r_value * fact_func(n - r));
     }
 
+    //--------------------------------------------Function overloading--------------------------------------------
+    public static int sum(int value_1, int value_2) {
+        return value_1 + value_2;
+    }
+
+    public static float sum(float value_1, float value_2) {
+        return value_1 + value_2;
+    }
+
+    public static int sum(int value_1, int value_2, int value_3) {
+        return value_1 + value_2 + value_3;
+    }
+
+    // ---------------------------------function to find if number is prime or not---------------------------------
+    public static boolean isprime(int n) {
+        boolean isprime = true;
+        for (int i = 2; i <= n - 1; i++) {
+            if (n % i == 0) {
+                isprime = false;
+            }
+        }
+        return isprime;
+    }
+
 //-----------------------------------------------------------------------------------------------------------------
 // -------------------------------- Main function starts from here ------------------------------------------------
     public static void main(String args[]) {
@@ -91,16 +115,29 @@ public class basic_func {
         // System.out.println(product(number1, number2)); //passing the copy of number1 and number2 
         //-----------------------------------------------------------------------------------------------------------
         // ----------------------------------- find the factorial of the number -----------------------------------
-        System.out.print("Enter a number of which you need a factorial: ");
-        int n = scan.nextInt();
-
+        // System.out.print("Enter a number of which you need a factorial: ");
+        // int n = scan.nextInt();
         // System.out.println(fact_func(n));
         // --------------------------------------------------------------------------------------------------------
         // ------------------------- find the Binominal coefficent -----------------------------------------
-        System.out.println("Enter a number of which you need a nCr: ");
-        int r = scan.nextInt();
+        // System.out.println("Enter a number of which you need a nCr: ");
+        // int r = scan.nextInt();
+        // System.out.println(bino_coeff(n, r));
+        // ----------------------------------------------------------------------------------------------------
+        // ----------------------------------------Function overloading----------------------------------------
+        // Function overloading - multiple function of same name but different parameter....
+        int value_1 = 10;
+        int value_2 = 20;
+        int value_3 = 50;
 
-        System.out.println(bino_coeff(n, r));
+        System.out.println(sum(value_1, value_2));
+        System.out.println(sum(value_1, value_2, value_3));
+
+        float result = sum(1.4f, 1.5f);
+        System.out.println(result);
+
+        // ----------------------calling function for checking if the number is prime or not----------------------
+        System.out.println(isprime(12));
 
     }
 }
