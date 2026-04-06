@@ -89,6 +89,20 @@ public class basic_func {
         return isprime;
     }
 
+    // ------------------------------------------------------------------------------------------------------------
+    // --------------------------------------print all prime number in range---------------------------------------
+    public static void primesinrange(int n) {
+
+        for (int i = 2; i <= n; i++) {
+
+            if (isprime(i) == true) {
+                System.out.print(i + " ");
+            }
+
+        }
+
+    }
+
     // ----------------------------------------------------------------------------------------------------------
     // -------------------------------- Main function starts from here --------------------------------------------
     public static void main(String args[]) {
@@ -142,16 +156,18 @@ public class basic_func {
         int value_2 = 20;
         int value_3 = 50;
 
-        System.out.println(sum(value_1, value_2));
-        System.out.println(sum(value_1, value_2, value_3));
-
+        // System.out.println(sum(value_1, value_2));
+        // System.out.println(sum(value_1, value_2, value_3));
         float result = sum(1.4f, 1.5f);
-        System.out.println(result);
+        // System.out.println(result);
 
         // ----------------------calling function for checking if the number is prime or not----------------------
-        System.out.println(isprime(12));
-
+        // System.out.println(isprime(12));
         // -----------calling function for checking if the number is prime or not for the optimized one-----------
-        System.out.println(isprime(12));
+        // System.out.println(isprime(12));
+        //--------------------------------------------------------------------------------------------------------
+        // -----------------------calling the function that print all prime number in ranges-----------------------
+        primesinrange(20);
+
     }
 }
