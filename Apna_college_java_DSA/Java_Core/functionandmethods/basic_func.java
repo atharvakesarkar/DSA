@@ -103,6 +103,23 @@ public class basic_func {
 
     }
 
+    // --------------------------------------converting binary into decimal-------------------------------------- 
+    public static void bin_to_dec(int binnum) {
+        int mynum = binnum; //store the orginal binary number for final output
+        int power = 0; //keep track of exponent
+        int decnum = 0; //store the final decimal result
+
+        while (binnum > 0) { //runs the loop untill all binary number are process
+            int last_digit = binnum % 10; //selects the last digit of ninary number
+            decnum = decnum + (last_digit * (int) Math.pow(2, power)); //convert the bit into the decimal value and store into the result 
+
+            power++; //move to next power of 2 for next digit
+            binnum = binnum / 10; //remove last digit so iterating process remaining number
+        }
+
+        System.out.println("The decimal number of " + mynum + " = " + decnum);
+    }
+
     // ----------------------------------------------------------------------------------------------------------
     // -------------------------------- Main function starts from here --------------------------------------------
     public static void main(String args[]) {
@@ -158,16 +175,16 @@ public class basic_func {
 
         // System.out.println(sum(value_1, value_2));
         // System.out.println(sum(value_1, value_2, value_3));
-        float result = sum(1.4f, 1.5f);
+        // float result = sum(1.4f, 1.5f);
         // System.out.println(result);
-
         // ----------------------calling function for checking if the number is prime or not----------------------
         // System.out.println(isprime(12));
         // -----------calling function for checking if the number is prime or not for the optimized one-----------
         // System.out.println(isprime(12));
         //--------------------------------------------------------------------------------------------------------
         // -----------------------calling the function that print all prime number in ranges-----------------------
-        primesinrange(20);
-
+        // primesinrange(20);
+        // --------------------------------------converting binary into decimal-----------------------------------
+        bin_to_dec(101); //calling the function 
     }
 }
