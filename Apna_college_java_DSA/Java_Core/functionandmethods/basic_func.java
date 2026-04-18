@@ -118,6 +118,26 @@ public class basic_func {
         }
 
         System.out.println("The decimal number of " + mynum + " = " + decnum);
+
+    }
+
+    // ------------------------------------------------------------------------------------------------------------
+    // ----------------------------------------converting decimal to binary----------------------------------------
+    public static void decTObin(int n) {
+        int binary_number = n;
+        int pow = 0;
+        int binNum = 0;
+
+        while (n > 0) {
+            int rem = n % 2;
+
+            binNum = binNum + (rem * (int) Math.pow(10, pow));
+
+            pow++;
+            n = n / 2;
+
+        }
+        System.out.println("The binary number of " + binary_number + " = " + binNum);
     }
 
     // ----------------------------------------------------------------------------------------------------------
@@ -127,6 +147,8 @@ public class basic_func {
 
         // printhello(); //call printhello function
         // System.out.println(sum()); //call sum function
+
+
         //---------------------------------------------------------------------------------------------------------
         // two user input for num1 and num2 
         Scanner scan = new Scanner(System.in); //created a object name as scan
@@ -135,6 +157,7 @@ public class basic_func {
         // System.out.print("ente a num2 value: ");
         // int num2 = scan.nextInt();
         // System.out.println("addition value is: " + addition(num1, num2));
+        
         //---------------------------------------------------------------------------------------------------
         //---------------------------------- code for swaping two numbers -----------------------------------
         int a = 10;
@@ -144,6 +167,7 @@ public class basic_func {
         // a = temp;
         // System.out.println(a);
         // System.out.println(b);
+        
         //--------------------------------------------------------------------------------------------------
         // ------------------------------------- calling a swap function ------------------------------------
         // CALL BY VALUE :  it is a mechanism in which the value of variable is copied and passed  to a method, so any changes made inside the method affect only the copy , not the orginal variable 
@@ -154,18 +178,20 @@ public class basic_func {
         // orginal variable 
         int number1 = 5;
         int number2 = 2;
-
         // System.out.println(product(number1, number2)); //passing the copy of number1 and number2 
-        //-----------------------------------------------------------------------------------------------------------
+        
+        // --------------------------------------------------------------------------------------------------------
         // ----------------------------------- find the factorial of the number -----------------------------------
         // System.out.print("Enter a number of which you need a factorial: ");
         // int n = scan.nextInt();
         // System.out.println(fact_func(n));
+        
         // --------------------------------------------------------------------------------------------------------
         // ------------------------- find the Binominal coefficent -----------------------------------------
         // System.out.println("Enter a number of which you need a nCr: ");
         // int r = scan.nextInt();
         // System.out.println(bino_coeff(n, r));
+        
         // ----------------------------------------------------------------------------------------------------
         // ----------------------------------------Function overloading----------------------------------------
         // Function overloading - multiple function of same name but different parameter....
@@ -177,14 +203,22 @@ public class basic_func {
         // System.out.println(sum(value_1, value_2, value_3));
         // float result = sum(1.4f, 1.5f);
         // System.out.println(result);
+        
         // ----------------------calling function for checking if the number is prime or not----------------------
         // System.out.println(isprime(12));
+        
         // -----------calling function for checking if the number is prime or not for the optimized one-----------
         // System.out.println(isprime(12));
+        
         //--------------------------------------------------------------------------------------------------------
         // -----------------------calling the function that print all prime number in ranges-----------------------
         // primesinrange(20);
+        
         // --------------------------------------converting binary into decimal-----------------------------------
-        bin_to_dec(101); //calling the function 
+        // bin_to_dec(101); //calling the function 
+        
+        // --------------------------------------converting decimal to binary--------------------------------------
+        // decTObin(11);
+
     }
 }
