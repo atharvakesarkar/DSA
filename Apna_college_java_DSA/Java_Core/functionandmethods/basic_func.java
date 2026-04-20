@@ -66,7 +66,7 @@ public class basic_func {
         return value_1 + value_2 + value_3;
     }
 
-    // // ---------------------------------function to find if number is prime or not---------------------------------
+    // // ---------------------------------function to find if number is prime or not------------------------------
     // public static boolean isprime(int n) {
     //     boolean isprime = true;
     //     for (int i = 2; i <= n - 1; i++) {
@@ -140,15 +140,22 @@ public class basic_func {
         System.out.println("The binary number of " + binary_number + " = " + binNum);
     }
 
+    // -----------------------------------------------Method scope----------------------------------------------- 
+    // method scope - a variable decleared inside a function is accessible only within that function and not outside it 
+    // public static void methodScope() {
+    //     // System.out.println(a);
+    //     int a = 10;
+    //     System.out.println(a);
+    // }
+
     // ----------------------------------------------------------------------------------------------------------
     // -------------------------------- Main function starts from here --------------------------------------------
     public static void main(String args[]) {
-        // functions - are the block of code that we need to repeat , so instead of writing it multiple time in program...define it in the function and just call it whenever it needed 
 
+        // functions - are the block of code that we need to repeat , so instead of writing it multiple time in program...define it in the function and just call it whenever it needed 
         // printhello(); //call printhello function
         // System.out.println(sum()); //call sum function
-
-
+        
         //---------------------------------------------------------------------------------------------------------
         // two user input for num1 and num2 
         Scanner scan = new Scanner(System.in); //created a object name as scan
@@ -157,7 +164,7 @@ public class basic_func {
         // System.out.print("ente a num2 value: ");
         // int num2 = scan.nextInt();
         // System.out.println("addition value is: " + addition(num1, num2));
-        
+
         //---------------------------------------------------------------------------------------------------
         //---------------------------------- code for swaping two numbers -----------------------------------
         int a = 10;
@@ -167,11 +174,10 @@ public class basic_func {
         // a = temp;
         // System.out.println(a);
         // System.out.println(b);
-        
+
         //--------------------------------------------------------------------------------------------------
         // ------------------------------------- calling a swap function ------------------------------------
         // CALL BY VALUE :  it is a mechanism in which the value of variable is copied and passed  to a method, so any changes made inside the method affect only the copy , not the orginal variable 
-
         // swap(a, b);
         // System.out.println(a);
         // System.out.println(b);
@@ -179,6 +185,7 @@ public class basic_func {
         int number1 = 5;
         int number2 = 2;
         // System.out.println(product(number1, number2)); //passing the copy of number1 and number2 
+
         
         // --------------------------------------------------------------------------------------------------------
         // ----------------------------------- find the factorial of the number -----------------------------------
@@ -203,7 +210,7 @@ public class basic_func {
         // System.out.println(sum(value_1, value_2, value_3));
         // float result = sum(1.4f, 1.5f);
         // System.out.println(result);
-        
+
         // ----------------------calling function for checking if the number is prime or not----------------------
         // System.out.println(isprime(12));
         
@@ -219,6 +226,28 @@ public class basic_func {
         
         // --------------------------------------converting decimal to binary--------------------------------------
         // decTObin(11);
+        
+        // --------------------------------------methodScope function calling--------------------------------------
+        // methodScope();
+
+        // ----------------------------------------------Block scope----------------------------------------------
+        // Block scope - a variable declared inside the a block { } is accessible only with in that block and cannot be used outside it 
+        {
+            String name = "Atharva kesarkar";
+            // System.out.println(name);
+        }
+
+        // System.out.println(name);
+
+        // --------------------------------------------------------------------------------------------------------
+        
+
+
+
+
+
+
+
 
     }
 }
