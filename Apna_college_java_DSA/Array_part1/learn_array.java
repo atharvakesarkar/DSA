@@ -2,7 +2,20 @@
 import java.util.*;
 
 public class learn_array {
+    // ----------------------------------------array as a function argument----------------------------------------
+    public static void  array_plus(int exam_marks[]){
+        for(int i = 0; i<exam_marks.length; i++){
+            exam_marks[i] = exam_marks[i] + 1;
+        }
+    }
 
+    
+    
+    
+    
+    
+    
+    // --------------------------------------------main function starts--------------------------------------------
     public static void main(String args[]) {
         // --------------------------------------------empty int array-------------------------------------------- 
         int num[] = new int[10];
@@ -41,12 +54,12 @@ public class learn_array {
         Scanner sc = new Scanner(System.in);
 
         // taking input in array 
-        System.out.println("enter your physics marks : ");
-        marks[0] = sc.nextInt();
-        System.out.println("enter your maths marks : ");
-        marks[1] = sc.nextInt();
-        System.out.println("enter your chemistry marks : ");
-        marks[2] = sc.nextInt();
+        // System.out.println("enter your physics marks : ");
+        // marks[0] = sc.nextInt();
+        // System.out.println("enter your maths marks : ");
+        // marks[1] = sc.nextInt();
+        // System.out.println("enter your chemistry marks : ");
+        // marks[2] = sc.nextInt();
 
         // printing marks value 
         // System.out.println("physics marks : " + marks[0]);
@@ -66,8 +79,18 @@ public class learn_array {
         // System.out.println(len_array);
 
         // --------------------------------------------------------------------------------------------------------
+        // ----------------------------------array passing as a function argument----------------------------------
+        
+        int exam_marks[] = {90 , 86, 82};
+        array_plus(exam_marks);
 
+        for(int i = 0; i < exam_marks.length; i++){
+            System.out.print(exam_marks[i] + " ");
+        }
+        System.out.println();
 
+        // 
+        
 
 
 
