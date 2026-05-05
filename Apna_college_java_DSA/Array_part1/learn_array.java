@@ -11,9 +11,8 @@ public class learn_array {
     }
 
     // ------------------------------------------------linearSearch------------------------------------------------
-    public static int linearSearch(int num_array[] , int key) {
-       
-       
+    public static int linearSearch(int num_array[], int key) {
+
         for (int i = 0; i < num_array.length; i++) {
             // System.out.println(num_array[i]);
             if (num_array[i] == key) {
@@ -24,11 +23,11 @@ public class learn_array {
 
     }
 
-    public static int  foodSearch(String food_menu[] , String choose){
+    public static int foodSearch(String food_menu[], String choose) {
 
-        for (int i = 0; i < food_menu.length; i++){
+        for (int i = 0; i < food_menu.length; i++) {
             // System.out.println(food_menu[i]);
-            if (food_menu[i].equals(choose)){
+            if (food_menu[i].equals(choose)) {
                 return i;
             }
         }
@@ -36,20 +35,19 @@ public class learn_array {
     }
 
     // --------------------------------------- largest number is array --------------------------------------------
-    public static void   largNum(int allNum[]){
+    public static void largNum(int allNum[]) {
         int largest = Integer.MIN_VALUE;
         int smallest = Integer.MAX_VALUE;
-        
-        for(int i = 0; i < allNum.length; i++){
 
-            if (allNum[i] > largest){
+        for (int i = 0; i < allNum.length; i++) {
+
+            if (allNum[i] > largest) {
                 largest = allNum[i];
             }
 
-            if (allNum[i] < smallest){
-                smallest = allNum[i];                
+            if (allNum[i] < smallest) {
+                smallest = allNum[i];
             }
-
 
         }
 
@@ -58,6 +56,25 @@ public class learn_array {
 
     }
 
+    // -------------------------------------------binary search function-------------------------------------------
+    public static int binarysearch(int binarr[], int key) {
+        int start = 0, end = binarr.length - 1;
+
+        while (start <= end) {
+            int mid =(start + end) / 2; // 0+6 / 2 =  (mid = 3)
+
+            // comparison
+            if (binarr[mid] == key){
+                return mid;
+            } 
+            if (binarr[mid] < key){
+                start = mid + 1; // index = 3 + 1 = 4 
+            } else {
+                end = mid - 1; // index = 3-1 = 2
+            }
+        }
+        return -1; //if the key dosent exist in array
+    }
 
     // --------------------------------------------main function starts--------------------------------------------
     public static void main(String args[]) {
@@ -131,45 +148,36 @@ public class learn_array {
 
         //-----------------------------------------linear search in array-----------------------------------------
         // int num_array[] = {2, 4, 6, 8, 10, 12, 14, 16, 18};
-
         // // System.out.print("enter a number for search: ");
         // // int key = sc.nextInt();
-
         // int index = linearSearch(num_array, key);
         // if (index == -1){
         //     // System.out.println(key + " not found ");
         // } else {
-
         // // System.out.println(key + " present at index no. " + index);
         // }
-
-
         // String food_menu []= { "vadapav" , "cholaa" , "meduvada" , "momos" , "samosa" , "sabji roti" , "masala dosa" , "popcorn"};
-
         // System.out.print("enter your food choice: ");
         // String choose = sc.next();
         // choose.toLowerCase();
-
         // int foodIndex = foodSearch(food_menu, choose);
-
         // if (foodIndex == -1){
         //     System.out.println(choose + " is not found");
         // } else {
         //     System.out.println(choose + " is found on index no " + foodIndex);
-
         // }
-
         // --------------------------------------------------------------------------------------------------------
         // ----------------------------------------largest number is array----------------------------------------
-
-        int allNum[] = {2,4,11,6,8};
+        int allNum[] = {2, 4, 11, 6, 8};
         // largNum(allNum);
 
         // --------------------------------------------------------------------------------------------------------
         // ----------------------------------------------Binary Search---------------------------------------------
+        int binarr[] = {2, 4, 6, 8, 10, 11, 12};
 
-        let binarr [] = {2,4,6,8,10,11,12};
- 
+        int key = 12;;
+
+        System.out.println(binarysearch(binarr, key));
 
     }
 
